@@ -1,2 +1,17 @@
-
+# Environment variables
 .env
+.env.*
+!.env.example
+
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Local archives
+*.zip
