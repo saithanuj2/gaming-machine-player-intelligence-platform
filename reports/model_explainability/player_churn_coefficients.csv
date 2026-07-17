@@ -1,0 +1,36 @@
+feature,coefficient,absolute_importance,effect_direction
+sessions_per_observed_day,-2.5824333252874507,2.5824333252874507,Lower churn risk
+observed_player_lifetime_days,1.9978414680477998,1.9978414680477998,Higher churn risk
+days_since_last_session,1.7760944853770284,1.7760944853770284,Higher churn risk
+sessions_last_90_days,-1.4428462256541268,1.4428462256541268,Lower churn risk
+sessions_last_30_days,-1.095509275999025,1.095509275999025,Lower churn risk
+machines_played,0.7375161199476428,0.7375161199476428,Higher churn risk
+loyalty_tier_Standard,-0.45683102632316014,0.45683102632316014,Lower churn risk
+total_historical_sessions,0.4515540743108321,0.4515540743108321,Higher churn risk
+average_session_minutes,-0.4475119859494138,0.4475119859494138,Lower churn risk
+total_session_minutes,-0.4413504510526647,0.4413504510526647,Lower churn risk
+home_region_Southwest,-0.4355585755503043,0.4355585755503043,Lower churn risk
+total_rounds,0.3885313434226088,0.3885313434226088,Higher churn risk
+loyalty_tier_Platinum,0.3818196691142381,0.3818196691142381,Higher churn risk
+player_net_revenue,0.320652473425205,0.320652473425205,Higher churn risk
+revenue_last_90_days,-0.22786639339549358,0.22786639339549358,Lower churn risk
+average_wager_per_session,-0.2158351246349915,0.2158351246349915,Lower churn risk
+age_band_40-49,-0.21323226715643046,0.21323226715643046,Lower churn risk
+loyalty_tier_Silver,-0.21224095034060775,0.21224095034060775,Lower churn risk
+wager_last_30_days,0.19909038403123452,0.19909038403123452,Higher churn risk
+age_band_60+,-0.1610951136710362,0.1610951136710362,Lower churn risk
+wager_last_90_days,-0.1411949635925527,0.1411949635925527,Lower churn risk
+marketing_opt_in,0.1387545144244212,0.1387545144244212,Higher churn risk
+total_wager,0.13102478990650587,0.13102478990650587,Higher churn risk
+total_payout,0.11129078562799802,0.11129078562799802,Higher churn risk
+loyalty_tier_Gold,-0.0893838203531925,0.0893838203531925,Lower churn risk
+revenue_last_30_days,-0.07994449612559965,0.07994449612559965,Lower churn risk
+home_region_Northeast,0.028384658652202802,0.028384658652202802,Higher churn risk
+home_region_Southeast,0.0274926903086983,0.0274926903086983,Higher churn risk
+locations_visited,0.02206730300872474,0.02206730300872474,Higher churn risk
+age_band_50-59,-0.017355253732888466,0.017355253732888466,Lower churn risk
+age_band_21-29,0.017138981574069012,0.017138981574069012,Higher churn risk
+home_region_West,0.01215122475966754,0.01215122475966754,Higher churn risk
+home_region_Midwest,-0.009106126072988045,0.009106126072988045,Lower churn risk
+age_band_30-39,-0.0020924749164348286,0.0020924749164348286,Lower churn risk
+registered_active_flag,0.0,0.0,Neutral

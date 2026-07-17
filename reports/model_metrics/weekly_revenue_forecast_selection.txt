@@ -1,0 +1,12 @@
+Selected forecasting method: Naive Previous-Week Baseline
+Best machine-learning model: Random Forest Regressor
+Selection metric: RMSE
+Validation method: Chronological weekly holdout
+Baseline: Previous-week revenue
+Baseline selected: True
+Best ML RMSE improvement over baseline: -41.51%
+Leakage controls: Same-week wager, payout, sessions, transactions, and event values excluded from model features
+Dataset type: Synthetic weekly gaming revenue
+
+Governance decision:
+The naive previous-week baseline outperformed all trained machine-learning models. The baseline was selected as the recommended forecasting method. The saved joblib file contains the best ML model for experimentation only.

@@ -1,0 +1,975 @@
+from __future__ import annotations
+
+import os
+from datetime import datetime
+from typing import Final
+
+import requests
+import streamlit as st
+
+from src.dashboard.styles import apply_dashboard_styles
+
+
+# =========================================================
+# APPLICATION CONFIGURATION
+# =========================================================
+
+APP_TITLE: Final[str] = "Gaming Machine Intelligence"
+APP_ICON: Final[str] = "🎰"
+
+DEFAULT_API_URL: Final[str] = os.getenv(
+    "GAMING_API_URL",
+    "http://127.0.0.1:8000",
+)
+
+AVAILABLE_ROLES: Final[tuple[str, ...]] = (
+    "Executive",
+    "Data Analyst",
+    "Operations Manager",
+    "Maintenance Manager",
+    "Administrator",
+)
+
+REFRESH_OPTIONS: Final[dict[str, int]] = {
+    "Manual": 0,
+    "30 seconds": 30,
+    "1 minute": 60,
+    "5 minutes": 300,
+}
+
+
+# =========================================================
+# PAGE CONFIGURATION
+# =========================================================
+
+st.set_page_config(
+    page_title=APP_TITLE,
+    page_icon=APP_ICON,
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        "Get Help": None,
+        "Report a bug": None,
+        "About": (
+            "Gaming Machine Player Intelligence Platform — "
+            "enterprise gaming analytics, machine monitoring, "
+            "player intelligence, and AI-powered forecasting."
+        ),
+    },
+)
+
+
+# =========================================================
+# SESSION STATE
+# =========================================================
+
+def initialize_session_state() -> None:
+    """Initialize persistent dashboard settings."""
+
+    default_values = {
+        "dashboard_theme": "Light",
+        "user_role": "Executive",
+        "api_url": DEFAULT_API_URL,
+        "refresh_interval": "Manual",
+        "last_refresh": datetime.now(),
+        "selected_location": "All Locations",
+        "authenticated": True,
+    }
+
+    for key, value in default_values.items():
+        if key not in st.session_state:
+            st.session_state[key] = value
+
+
+initialize_session_state()
+
+
+# =========================================================
+# GLOBAL STYLING
+# =========================================================
+
+apply_dashboard_styles(
+    theme=st.session_state.dashboard_theme,
+)
+
+
+# =========================================================
+# API HEALTH CHECK
+# =========================================================
+
+@st.cache_data(ttl=20, show_spinner=False)
+def check_api_health(api_url: str) -> dict[str, object]:
+    """
+    Check whether the FastAPI backend is available.
+
+    The function supports common health endpoint paths and returns
+    a normalized status dictionary.
+    """
+
+    normalized_url = api_url.rstrip("/")
+
+    health_paths = (
+        "/health",
+        "/api/health",
+        "/healthz",
+    )
+
+    for path in health_paths:
+        try:
+            response = requests.get(
+                f"{normalized_url}{path}",
+                timeout=2.5,
+            )
+
+            if response.status_code == 200:
+                try:
+                    payload = response.json()
+                except ValueError:
+                    payload = {}
+
+                return {
+                    "online": True,
+                    "status_code": response.status_code,
+                    "endpoint": path,
+                    "payload": payload,
+                }
+
+        except requests.RequestException:
+            continue
+
+    return {
+        "online": False,
+        "status_code": None,
+        "endpoint": None,
+        "payload": {},
+    }
+
+
+# =========================================================
+# ROLE-BASED PAGE DEFINITIONS
+# =========================================================
+
+def build_navigation_pages(
+    selected_role: str,
+) -> dict[str, list[st.Page]]:
+    """Return navigation pages allowed for the selected role."""
+
+    executive_page = st.Page(
+        "pages/executive.py",
+        title="Executive Overview",
+        icon=":material/dashboard:",
+        default=True,
+    )
+
+    revenue_page = st.Page(
+        "pages/revenue.py",
+        title="Revenue Analytics",
+        icon=":material/monitoring:",
+    )
+
+    players_page = st.Page(
+        "pages/players.py",
+        title="Player Intelligence",
+        icon=":material/groups:",
+    )
+
+    machines_page = st.Page(
+        "pages/machines.py",
+        title="Machine Analytics",
+        icon=":material/precision_manufacturing:",
+    )
+
+    operations_page = st.Page(
+        "pages/operations.py",
+        title="Operations Center",
+        icon=":material/warning:",
+    )
+
+    predictions_page = st.Page(
+        "pages/predictions.py",
+        title="AI Predictions",
+        icon=":material/psychology:",
+    )
+
+    administration_page = st.Page(
+        "pages/administration.py",
+        title="Administration",
+        icon=":material/admin_panel_settings:",
+    )
+
+    role_pages = {
+        "Executive": {
+            "Enterprise Intelligence": [
+                executive_page,
+                revenue_page,
+                players_page,
+                machines_page,
+                operations_page,
+                predictions_page,
+            ],
+        },
+        "Data Analyst": {
+            "Analytics": [
+                executive_page,
+                revenue_page,
+                players_page,
+                machines_page,
+                predictions_page,
+            ],
+        },
+        "Operations Manager": {
+            "Operations": [
+                executive_page,
+                machines_page,
+                operations_page,
+                predictions_page,
+            ],
+        },
+        "Maintenance Manager": {
+            "Maintenance": [
+                executive_page,
+                machines_page,
+                operations_page,
+            ],
+        },
+        "Administrator": {
+            "Enterprise Intelligence": [
+                executive_page,
+                revenue_page,
+                players_page,
+                machines_page,
+                operations_page,
+                predictions_page,
+            ],
+            "System Management": [
+                administration_page,
+            ],
+        },
+    }
+
+    return role_pages.get(
+        selected_role,
+        role_pages["Executive"],
+    )
+
+
+# =========================================================
+# SIDEBAR
+# =========================================================
+
+def render_sidebar() -> None:
+    """Render application controls and platform status."""
+
+    with st.sidebar:
+        st.markdown(
+            """
+            <div class="sidebar-brand">
+                <div class="sidebar-brand-icon">GI</div>
+                <div>
+                    <div class="sidebar-brand-title">
+                        Gaming Intelligence
+                    </div>
+                    <div class="sidebar-brand-subtitle">
+                        Enterprise Analytics Platform
+                    </div>
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+        st.markdown(
+            '<div class="sidebar-section-label">ACCESS PROFILE</div>',
+            unsafe_allow_html=True,
+        )
+
+        selected_role = st.selectbox(
+            "User Role",
+            options=AVAILABLE_ROLES,
+            index=AVAILABLE_ROLES.index(
+                st.session_state.user_role
+            ),
+            key="sidebar_role_selector",
+        )
+
+        if selected_role != st.session_state.user_role:
+            st.session_state.user_role = selected_role
+            st.rerun()
+
+        st.markdown(
+            '<div class="sidebar-section-label">APPEARANCE</div>',
+            unsafe_allow_html=True,
+        )
+
+        theme_options = ("Light", "Dark")
+
+        selected_theme = st.selectbox(
+            "Dashboard Theme",
+            options=theme_options,
+            index=theme_options.index(
+                st.session_state.dashboard_theme
+            ),
+            key="sidebar_theme_selector",
+        )
+
+        if selected_theme != st.session_state.dashboard_theme:
+            st.session_state.dashboard_theme = selected_theme
+            st.rerun()
+
+        st.markdown(
+            '<div class="sidebar-section-label">DATA CONNECTION</div>',
+            unsafe_allow_html=True,
+        )
+
+        api_url = st.text_input(
+            "FastAPI URL",
+            value=st.session_state.api_url,
+            placeholder="http://127.0.0.1:8000",
+            key="sidebar_api_url",
+        )
+
+        if api_url.strip():
+            st.session_state.api_url = api_url.strip()
+
+        api_health = check_api_health(
+            st.session_state.api_url
+        )
+
+        if api_health["online"]:
+            st.markdown(
+                """
+                <div class="connection-status connection-online">
+                    <span class="connection-dot"></span>
+                    <div>
+                        <strong>API Connected</strong>
+                        <span>Live backend available</span>
+                    </div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+        else:
+            st.markdown(
+                """
+                <div class="connection-status connection-offline">
+                    <span class="connection-dot"></span>
+                    <div>
+                        <strong>Demo Data Mode</strong>
+                        <span>FastAPI backend unavailable</span>
+                    </div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+        if st.button(
+            "Test API Connection",
+            use_container_width=True,
+            key="test_api_connection",
+        ):
+            check_api_health.clear()
+            st.rerun()
+
+        st.markdown(
+            '<div class="sidebar-section-label">REFRESH SETTINGS</div>',
+            unsafe_allow_html=True,
+        )
+
+        selected_refresh = st.selectbox(
+            "Refresh Frequency",
+            options=tuple(REFRESH_OPTIONS.keys()),
+            index=tuple(REFRESH_OPTIONS.keys()).index(
+                st.session_state.refresh_interval
+            ),
+            key="sidebar_refresh_interval",
+        )
+
+        st.session_state.refresh_interval = selected_refresh
+
+        if st.button(
+            "Refresh Dashboard",
+            type="primary",
+            use_container_width=True,
+            key="global_refresh_button",
+        ):
+            st.cache_data.clear()
+            st.session_state.last_refresh = datetime.now()
+            st.rerun()
+
+        st.markdown(
+            """
+            <div class="sidebar-footer">
+                <div class="sidebar-footer-title">
+                    Gaming Machine Intelligence
+                </div>
+                <div class="sidebar-footer-text">
+                    Revenue · Players · Machines · AI
+                </div>
+                <div class="sidebar-footer-version">
+                    Enterprise Edition · v1.0
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+
+render_sidebar()
+
+
+# =========================================================
+# AUTOMATIC REFRESH
+# =========================================================
+
+refresh_seconds = REFRESH_OPTIONS.get(
+    st.session_state.refresh_interval,
+    0,
+)
+
+if refresh_seconds > 0:
+    try:
+        from streamlit_autorefresh import st_autorefresh
+
+        st_autorefresh(
+            interval=refresh_seconds * 1000,
+            key="enterprise_dashboard_auto_refresh",
+        )
+    except ImportError:
+        pass
+
+
+# =========================================================
+# APPLICATION NAVIGATION
+# =========================================================
+
+navigation_pages = build_navigation_pages(
+    selected_role=st.session_state.user_role,
+)
+
+navigation = st.navigation(
+    navigation_pages,
+    position="sidebar",from __future__ import annotations
+
+import os
+import sys
+from datetime import datetime
+from pathlib import Path
+from typing import Final
+
+import requests
+import streamlit as st
+
+
+# =========================================================
+# PROJECT PATH CONFIGURATION
+# =========================================================
+
+# Current file:
+# project_root/src/dashboard/app.py
+#
+# parents[0] -> dashboard
+# parents[1] -> src
+# parents[2] -> project root
+
+PROJECT_ROOT: Final[Path] = Path(__file__).resolve().parents[2]
+
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+
+from src.dashboard.styles import apply_dashboard_styles
+
+
+# =========================================================
+# APPLICATION CONFIGURATION
+# =========================================================
+
+APP_TITLE: Final[str] = "Gaming Machine Intelligence"
+APP_ICON: Final[str] = "🎰"
+
+DEFAULT_API_URL: Final[str] = os.getenv(
+    "GAMING_API_URL",
+    "http://127.0.0.1:8000",
+)
+
+AVAILABLE_ROLES: Final[tuple[str, ...]] = (
+    "Executive",
+    "Data Analyst",
+    "Operations Manager",
+    "Maintenance Manager",
+    "Administrator",
+)
+
+THEME_OPTIONS: Final[tuple[str, ...]] = (
+    "Light",
+    "Dark",
+)
+
+REFRESH_OPTIONS: Final[dict[str, int]] = {
+    "Manual": 0,
+    "30 seconds": 30,
+    "1 minute": 60,
+    "5 minutes": 300,
+}
+
+
+# =========================================================
+# STREAMLIT PAGE CONFIGURATION
+# =========================================================
+
+st.set_page_config(
+    page_title=APP_TITLE,
+    page_icon=APP_ICON,
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        "Get Help": None,
+        "Report a bug": None,
+        "About": (
+            "Gaming Machine Player Intelligence Platform — "
+            "enterprise gaming analytics, machine monitoring, "
+            "player intelligence, and AI-powered forecasting."
+        ),
+    },
+)
+
+
+# =========================================================
+# SESSION STATE
+# =========================================================
+
+def initialize_session_state() -> None:
+    """Initialize dashboard settings and persistent values."""
+
+    default_values = {
+        "dashboard_theme": "Light",
+        "user_role": "Executive",
+        "api_url": DEFAULT_API_URL,
+        "refresh_interval": "Manual",
+        "last_refresh": datetime.now(),
+        "selected_location": "All Locations",
+        "authenticated": True,
+    }
+
+    for key, value in default_values.items():
+        if key not in st.session_state:
+            st.session_state[key] = value
+
+
+initialize_session_state()
+
+
+# =========================================================
+# GLOBAL DASHBOARD STYLING
+# =========================================================
+
+apply_dashboard_styles(
+    theme=st.session_state.dashboard_theme,
+)
+
+
+# =========================================================
+# API HEALTH CHECK
+# =========================================================
+
+@st.cache_data(ttl=20, show_spinner=False)
+def check_api_health(api_url: str) -> dict[str, object]:
+    """
+    Check whether the FastAPI backend is available.
+
+    The function checks multiple common health endpoints and
+    returns a normalized status dictionary.
+    """
+
+    normalized_url = api_url.strip().rstrip("/")
+
+    if not normalized_url:
+        return {
+            "online": False,
+            "status_code": None,
+            "endpoint": None,
+            "payload": {},
+            "message": "API URL is empty.",
+        }
+
+    health_paths = (
+        "/health",
+        "/api/health",
+        "/healthz",
+    )
+
+    for path in health_paths:
+        try:
+            response = requests.get(
+                f"{normalized_url}{path}",
+                timeout=2.5,
+            )
+
+            if response.status_code == 200:
+                try:
+                    payload = response.json()
+                except ValueError:
+                    payload = {}
+
+                return {
+                    "online": True,
+                    "status_code": response.status_code,
+                    "endpoint": path,
+                    "payload": payload,
+                    "message": "FastAPI backend connected.",
+                }
+
+        except requests.RequestException:
+            continue
+
+    return {
+        "online": False,
+        "status_code": None,
+        "endpoint": None,
+        "payload": {},
+        "message": "FastAPI backend unavailable.",
+    }
+
+
+# =========================================================
+# ROLE-BASED NAVIGATION
+# =========================================================
+
+def build_navigation_pages(
+    selected_role: str,
+) -> dict[str, list[st.Page]]:
+    """Return dashboard pages permitted for the selected role."""
+
+    executive_page = st.Page(
+        "pages/executive.py",
+        title="Executive Overview",
+        icon=":material/dashboard:",
+        default=True,
+    )
+
+    revenue_page = st.Page(
+        "pages/revenue.py",
+        title="Revenue Analytics",
+        icon=":material/monitoring:",
+    )
+
+    players_page = st.Page(
+        "pages/players.py",
+        title="Player Intelligence",
+        icon=":material/groups:",
+    )
+
+    machines_page = st.Page(
+        "pages/machines.py",
+        title="Machine Analytics",
+        icon=":material/precision_manufacturing:",
+    )
+
+    operations_page = st.Page(
+        "pages/operations.py",
+        title="Operations Center",
+        icon=":material/warning:",
+    )
+
+    predictions_page = st.Page(
+        "pages/predictions.py",
+        title="AI Predictions",
+        icon=":material/psychology:",
+    )
+
+    administration_page = st.Page(
+        "pages/administration.py",
+        title="Administration",
+        icon=":material/admin_panel_settings:",
+    )
+
+    role_pages: dict[str, dict[str, list[st.Page]]] = {
+        "Executive": {
+            "Enterprise Intelligence": [
+                executive_page,
+                revenue_page,
+                players_page,
+                machines_page,
+                operations_page,
+                predictions_page,
+            ],
+        },
+        "Data Analyst": {
+            "Analytics": [
+                executive_page,
+                revenue_page,
+                players_page,
+                machines_page,
+                predictions_page,
+            ],
+        },
+        "Operations Manager": {
+            "Operations": [
+                executive_page,
+                machines_page,
+                operations_page,
+                predictions_page,
+            ],
+        },
+        "Maintenance Manager": {
+            "Maintenance": [
+                executive_page,
+                machines_page,
+                operations_page,
+            ],
+        },
+        "Administrator": {
+            "Enterprise Intelligence": [
+                executive_page,
+                revenue_page,
+                players_page,
+                machines_page,
+                operations_page,
+                predictions_page,
+            ],
+            "System Management": [
+                administration_page,
+            ],
+        },
+    }
+
+    return role_pages.get(
+        selected_role,
+        role_pages["Executive"],
+    )
+
+
+# =========================================================
+# SIDEBAR
+# =========================================================
+
+def render_sidebar() -> None:
+    """Render enterprise sidebar controls."""
+
+    with st.sidebar:
+        st.markdown(
+            """
+            <div class="sidebar-brand">
+                <div class="sidebar-brand-icon">GI</div>
+                <div>
+                    <div class="sidebar-brand-title">
+                        Gaming Intelligence
+                    </div>
+                    <div class="sidebar-brand-subtitle">
+                        Enterprise Analytics Platform
+                    </div>
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+        # -------------------------------------------------
+        # Role selector
+        # -------------------------------------------------
+
+        st.markdown(
+            '<div class="sidebar-section-label">ACCESS PROFILE</div>',
+            unsafe_allow_html=True,
+        )
+
+        current_role = st.session_state.user_role
+
+        selected_role = st.selectbox(
+            "User Role",
+            options=AVAILABLE_ROLES,
+            index=AVAILABLE_ROLES.index(current_role),
+            key="sidebar_role_selector",
+        )
+
+        if selected_role != current_role:
+            st.session_state.user_role = selected_role
+            st.rerun()
+
+        # -------------------------------------------------
+        # Theme selector
+        # -------------------------------------------------
+
+        st.markdown(
+            '<div class="sidebar-section-label">APPEARANCE</div>',
+            unsafe_allow_html=True,
+        )
+
+        current_theme = st.session_state.dashboard_theme
+
+        selected_theme = st.selectbox(
+            "Dashboard Theme",
+            options=THEME_OPTIONS,
+            index=THEME_OPTIONS.index(current_theme),
+            key="sidebar_theme_selector",
+        )
+
+        if selected_theme != current_theme:
+            st.session_state.dashboard_theme = selected_theme
+            st.rerun()
+
+        # -------------------------------------------------
+        # API settings
+        # -------------------------------------------------
+
+        st.markdown(
+            '<div class="sidebar-section-label">DATA CONNECTION</div>',
+            unsafe_allow_html=True,
+        )
+
+        entered_api_url = st.text_input(
+            "FastAPI URL",
+            value=st.session_state.api_url,
+            placeholder="http://127.0.0.1:8000",
+            key="sidebar_api_url",
+        )
+
+        if entered_api_url.strip():
+            st.session_state.api_url = entered_api_url.strip()
+
+        api_health = check_api_health(
+            st.session_state.api_url
+        )
+
+        if bool(api_health["online"]):
+            st.markdown(
+                """
+                <div class="connection-status connection-online">
+                    <span class="connection-dot"></span>
+                    <div>
+                        <strong>API Connected</strong>
+                        <span>Live backend available</span>
+                    </div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+        else:
+            st.markdown(
+                """
+                <div class="connection-status connection-offline">
+                    <span class="connection-dot"></span>
+                    <div>
+                        <strong>Demo Data Mode</strong>
+                        <span>FastAPI backend unavailable</span>
+                    </div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+        if st.button(
+            "Test API Connection",
+            use_container_width=True,
+            key="test_api_connection_button",
+        ):
+            check_api_health.clear()
+            st.rerun()
+
+        # -------------------------------------------------
+        # Refresh settings
+        # -------------------------------------------------
+
+        st.markdown(
+            '<div class="sidebar-section-label">REFRESH SETTINGS</div>',
+            unsafe_allow_html=True,
+        )
+
+        refresh_labels = tuple(REFRESH_OPTIONS.keys())
+        current_refresh = st.session_state.refresh_interval
+
+        selected_refresh = st.selectbox(
+            "Refresh Frequency",
+            options=refresh_labels,
+            index=refresh_labels.index(current_refresh),
+            key="sidebar_refresh_interval",
+        )
+
+        st.session_state.refresh_interval = selected_refresh
+
+        if st.button(
+            "Refresh Dashboard",
+            type="primary",
+            use_container_width=True,
+            key="global_refresh_button",
+        ):
+            st.cache_data.clear()
+            st.session_state.last_refresh = datetime.now()
+            st.rerun()
+
+        # -------------------------------------------------
+        # Sidebar footer
+        # -------------------------------------------------
+
+        last_refresh_text = st.session_state.last_refresh.strftime(
+            "%b %d, %Y · %I:%M:%S %p"
+        )
+
+        st.markdown(
+            f"""
+            <div class="sidebar-footer">
+                <div class="sidebar-footer-title">
+                    Gaming Machine Intelligence
+                </div>
+                <div class="sidebar-footer-text">
+                    Revenue · Players · Machines · AI
+                </div>
+                <div class="sidebar-footer-version">
+                    Last refresh: {last_refresh_text}
+                </div>
+                <div class="sidebar-footer-version">
+                    Enterprise Edition · v1.0
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+
+render_sidebar()
+
+
+# =========================================================
+# AUTOMATIC REFRESH
+# =========================================================
+
+refresh_seconds = REFRESH_OPTIONS.get(
+    st.session_state.refresh_interval,
+    0,
+)
+
+if refresh_seconds > 0:
+    try:
+        from streamlit_autorefresh import st_autorefresh
+
+        st_autorefresh(
+            interval=refresh_seconds * 1000,
+            key="enterprise_dashboard_auto_refresh",
+        )
+
+    except ImportError:
+        st.sidebar.caption(
+            "Automatic refresh requires "
+            "`streamlit-autorefresh`."
+        )
+
+
+# =========================================================
+# APPLICATION NAVIGATION
+# =========================================================
+
+navigation_pages = build_navigation_pages(
+    selected_role=st.session_state.user_role,
+)
+
+navigation = st.navigation(
+    navigation_pages,
+    position="sidebar",
+    expanded=True,
+)
+
+navigation.run()
+    expanded=True,
+)
+
+navigation.run()

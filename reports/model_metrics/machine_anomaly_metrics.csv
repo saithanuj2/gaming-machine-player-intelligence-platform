@@ -1,0 +1,2 @@
+precision_vs_rule_label,recall_vs_rule_label,f1_vs_rule_label,true_negative,false_positive,false_negative,true_positive
+0.6721153846153847,0.6721153846153847,0.6721153846153847,13412,341,341,699

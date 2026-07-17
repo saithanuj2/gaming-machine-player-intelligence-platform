@@ -1,0 +1,7 @@
+Best model: Random Forest Regressor
+Selection metric: RMSE
+Validation method: Chronological weekly holdout
+Baseline: Previous-week revenue
+RMSE improvement over baseline: -41.51%
+Leakage controls: Same-week wager, payout, session, transaction and event values excluded from model features
+Dataset type: Synthetic weekly gaming revenue

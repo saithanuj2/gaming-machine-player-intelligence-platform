@@ -1,0 +1,6 @@
+Model: Isolation Forest
+Contamination: 0.0703
+Dataset: Synthetic machine-day gaming data
+Learning type: Unsupervised anomaly detection
+Validation benchmark: SQL rule-based anomaly label
+Important note: Rule-based labels are not true ground-truth anomalies and are used only for benchmark comparison.

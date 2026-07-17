@@ -1,0 +1,9 @@
+Model: K-Means Player Segmentation
+Selected cluster count: 2
+Silhouette score: 0.4818
+Players segmented: 4,706
+Selection method: Maximum silhouette score
+Preprocessing: Median imputation and standard scaling
+Dataset type: Synthetic gaming player data
+Learning type: Unsupervised clustering
+Important note: Business segment names are assigned after clustering using aggregated behavioral profiles.

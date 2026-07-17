@@ -1,0 +1,26 @@
+machine_id,manufacturer,game_category,software_version,failure_target_flag,predicted_failure_flag,failure_probability
+MCH000010,Aristocrat,Video Slots,v4.2,1,1,0.9801
+MCH000019,Everi,Reel Slots,v4.2,1,1,0.9763
+MCH000011,Konami,Video Slots,v5.0,1,1,0.9649000000000001
+MCH000012,Konami,Reel Slots,v4.2,1,1,0.9609666666666667
+MCH000032,Light & Wonder,Video Slots,v5.1,1,1,0.9458999999999999
+MCH000041,Everi,Video Slots,v5.0,1,1,0.9438999999999999
+MCH000040,Konami,Video Slots,v4.1,1,1,0.9422333333333334
+MCH000045,Light & Wonder,Video Poker,v5.0,1,1,0.9311999999999998
+MCH000028,Everi,Reel Slots,v5.1,0,1,0.8177000000000001
+MCH000094,Aristocrat,Video Poker,v5.0,1,1,0.7783857142857143
+MCH000082,Aristocrat,Video Poker,v4.1,1,1,0.6688
+MCH000057,Light & Wonder,Reel Slots,v5.0,1,1,0.6281333333333331
+MCH000004,Light & Wonder,Reel Slots,v4.1,1,1,0.5307047619047622
+MCH000038,IGT,Video Poker,v4.2,0,0,0.05766666666666666
+MCH000064,Aristocrat,Video Poker,v4.1,0,0,0.038583333333333324
+MCH000024,Light & Wonder,Reel Slots,v4.1,0,0,0.0268
+MCH000052,Light & Wonder,Video Slots,v4.1,0,0,0.022166666666666664
+MCH000076,Light & Wonder,Video Poker,v4.1,0,0,0.020466666666666664
+MCH000058,Everi,Video Slots,v5.0,0,0,0.017799999999999996
+MCH000049,Aristocrat,Video Poker,v5.1,0,0,0.016133333333333333
+MCH000059,IGT,Reel Slots,v5.0,0,0,0.011533333333333333
+MCH000099,Aristocrat,Video Poker,v5.1,1,0,0.0113
+MCH000083,Everi,Video Poker,v5.1,0,0,0.010066666666666665
+MCH000080,Light & Wonder,Video Poker,v4.2,0,0,0.007566666666666667
+MCH000092,IGT,Reel Slots,v5.0,0,0,0.0016666666666666666

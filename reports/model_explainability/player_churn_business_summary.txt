@@ -1,0 +1,51 @@
+PLAYER CHURN EXPLAINABILITY & BUSINESS PRIORITIZATION
+=====================================================
+
+Dataset
+-------
+Players scored: 4,706
+
+Critical and High-Risk Players
+------------------------------
+Critical risk: 2,287
+
+High risk: 131
+
+Revenue at Risk
+---------------
+Estimated total revenue at risk: $64,946.10
+
+Top 100 priority-player revenue at risk: $15,320.30
+
+Features Associated with Higher Churn Risk
+------------------------------------------
+- observed_player_lifetime_days
+- days_since_last_session
+- machines_played
+- total_historical_sessions
+- total_rounds
+
+Features Associated with Lower Churn Risk
+-----------------------------------------
+- sessions_per_observed_day
+- sessions_last_90_days
+- sessions_last_30_days
+- loyalty_tier_Standard
+- average_session_minutes
+
+Recommended Business Actions
+----------------------------
+1. Prioritize the highest retention-priority scores, not only
+   the highest churn probabilities.
+2. Contact Critical-risk players immediately.
+3. Send targeted loyalty offers to High-risk players with
+   positive historical revenue.
+4. Monitor Medium-risk players for reduced recent engagement.
+5. Use player value and probability together to control
+   campaign costs.
+
+Interpretation Note
+-------------------
+Results are based on synthetic behavioral gaming data.
+Model performance and revenue-at-risk estimates must be
+externally validated before production use.

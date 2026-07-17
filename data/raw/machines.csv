@@ -1,0 +1,101 @@
+machine_id,location_id,manufacturer,cabinet_type,game_title,game_category,install_date,software_version,machine_status,theoretical_hold_pct
+MCH000001,LOC0004,Everi,Premium,Game 015,Reel Slots,2025-01-26,v5.0,Active,0.0837
+MCH000002,LOC0001,Aristocrat,Premium,Game 022,Reel Slots,2023-12-27,v4.2,Active,0.1356
+MCH000003,LOC0006,IGT,Standard,Game 025,Video Slots,2021-06-05,v5.0,Active,0.1159
+MCH000004,LOC0010,Light & Wonder,Standard,Game 047,Reel Slots,2019-06-26,v4.1,Maintenance,0.1039
+MCH000005,LOC0007,IGT,Slant Top,Game 041,Video Poker,2021-01-11,v5.0,Active,0.064
+MCH000006,LOC0002,IGT,Upright,Game 050,Reel Slots,2022-03-26,v4.1,Active,0.064
+MCH000007,LOC0002,Konami,Slant Top,Game 030,Video Poker,2019-11-18,v5.0,Active,0.0552
+MCH000008,LOC0006,Aristocrat,Slant Top,Game 045,Video Poker,2022-05-24,v4.1,Active,0.128
+MCH000009,LOC0003,Everi,Upright,Game 011,Reel Slots,2018-07-25,v5.1,Active,0.1041
+MCH000010,LOC0009,Aristocrat,Slant Top,Game 050,Video Slots,2024-09-04,v4.2,Active,0.1137
+MCH000011,LOC0006,Konami,Slant Top,Game 005,Video Slots,2025-12-26,v5.0,Active,0.0519
+MCH000012,LOC0008,Konami,Premium,Game 010,Reel Slots,2024-08-27,v4.2,Active,0.1373
+MCH000013,LOC0009,Everi,Slant Top,Game 048,Video Poker,2020-10-10,v5.1,Active,0.1249
+MCH000014,LOC0007,Light & Wonder,Upright,Game 009,Video Poker,2022-10-17,v5.1,Active,0.0691
+MCH000015,LOC0001,IGT,Upright,Game 041,Video Slots,2025-01-06,v5.1,Active,0.0664
+MCH000016,LOC0007,Konami,Premium,Game 034,Reel Slots,2020-01-21,v4.1,Active,0.0665
+MCH000017,LOC0002,Everi,Slant Top,Game 050,Video Poker,2022-11-08,v5.0,Active,0.0774
+MCH000018,LOC0007,Aristocrat,Premium,Game 001,Video Poker,2026-04-19,v5.0,Maintenance,0.0972
+MCH000019,LOC0003,Everi,Standard,Game 041,Reel Slots,2019-06-10,v4.2,Active,0.0889
+MCH000020,LOC0003,Everi,Standard,Game 039,Reel Slots,2025-12-09,v5.1,Active,0.0762
+MCH000021,LOC0006,Light & Wonder,Upright,Game 004,Video Slots,2023-11-08,v4.1,Active,0.1051
+MCH000022,LOC0008,IGT,Upright,Game 009,Video Poker,2021-01-27,v5.1,Maintenance,0.0626
+MCH000023,LOC0003,Light & Wonder,Premium,Game 014,Video Poker,2025-09-10,v4.2,Active,0.0763
+MCH000024,LOC0007,Light & Wonder,Premium,Game 034,Reel Slots,2023-12-21,v4.1,Active,0.083
+MCH000025,LOC0002,Light & Wonder,Standard,Game 038,Video Poker,2022-11-08,v4.2,Active,0.091
+MCH000026,LOC0001,IGT,Standard,Game 015,Video Slots,2023-09-19,v4.1,Active,0.1207
+MCH000027,LOC0002,Everi,Upright,Game 018,Video Poker,2020-03-23,v5.1,Active,0.068
+MCH000028,LOC0003,Everi,Premium,Game 016,Reel Slots,2019-11-01,v5.1,Active,0.0963
+MCH000029,LOC0002,Konami,Slant Top,Game 028,Reel Slots,2021-09-18,v5.1,Active,0.1033
+MCH000030,LOC0001,IGT,Standard,Game 026,Video Poker,2025-01-08,v5.0,Active,0.0542
+MCH000031,LOC0002,Aristocrat,Upright,Game 013,Video Poker,2019-11-28,v5.1,Active,0.1047
+MCH000032,LOC0003,Light & Wonder,Premium,Game 016,Video Slots,2023-02-14,v5.1,Active,0.0653
+MCH000033,LOC0009,IGT,Standard,Game 042,Video Poker,2025-02-27,v4.1,Maintenance,0.0559
+MCH000034,LOC0004,Aristocrat,Premium,Game 032,Reel Slots,2026-05-19,v4.2,Active,0.1354
+MCH000035,LOC0001,Aristocrat,Premium,Game 001,Reel Slots,2023-01-17,v5.0,Active,0.1369
+MCH000036,LOC0008,Light & Wonder,Premium,Game 045,Video Poker,2026-05-07,v5.1,Active,0.1228
+MCH000037,LOC0005,Aristocrat,Standard,Game 038,Video Poker,2018-07-16,v4.1,Active,0.0774
+MCH000038,LOC0001,IGT,Premium,Game 033,Video Poker,2023-08-18,v4.2,Active,0.0588
+MCH000039,LOC0009,IGT,Upright,Game 005,Video Poker,2021-04-17,v4.1,Active,0.1116
+MCH000040,LOC0004,Konami,Standard,Game 037,Video Slots,2022-09-10,v4.1,Active,0.0896
+MCH000041,LOC0007,Everi,Slant Top,Game 017,Video Slots,2018-09-13,v5.0,Active,0.061
+MCH000042,LOC0007,Aristocrat,Slant Top,Game 030,Reel Slots,2019-06-27,v4.1,Active,0.0946
+MCH000043,LOC0010,Everi,Standard,Game 005,Video Poker,2026-06-09,v4.2,Active,0.0531
+MCH000044,LOC0003,Light & Wonder,Standard,Game 016,Reel Slots,2021-08-15,v5.0,Active,0.1318
+MCH000045,LOC0009,Light & Wonder,Standard,Game 043,Video Poker,2026-01-04,v5.0,Maintenance,0.0733
+MCH000046,LOC0002,Aristocrat,Slant Top,Game 008,Video Slots,2025-08-10,v4.2,Active,0.1096
+MCH000047,LOC0010,Aristocrat,Slant Top,Game 014,Video Poker,2025-05-25,v5.0,Active,0.0781
+MCH000048,LOC0005,IGT,Standard,Game 041,Reel Slots,2021-02-24,v5.0,Active,0.0968
+MCH000049,LOC0006,Aristocrat,Slant Top,Game 011,Video Poker,2020-07-27,v5.1,Active,0.0992
+MCH000050,LOC0007,Everi,Standard,Game 008,Video Slots,2019-01-10,v4.2,Active,0.0666
+MCH000051,LOC0006,Everi,Upright,Game 028,Video Slots,2020-08-01,v4.1,Active,0.1373
+MCH000052,LOC0001,Light & Wonder,Upright,Game 044,Video Slots,2026-01-01,v4.1,Active,0.1198
+MCH000053,LOC0009,Konami,Upright,Game 016,Video Slots,2023-05-12,v4.2,Active,0.1346
+MCH000054,LOC0001,Aristocrat,Slant Top,Game 027,Video Poker,2019-03-16,v4.2,Active,0.1305
+MCH000055,LOC0002,Konami,Standard,Game 031,Video Slots,2019-04-07,v4.2,Active,0.1038
+MCH000056,LOC0008,Light & Wonder,Slant Top,Game 015,Video Slots,2024-10-04,v4.1,Active,0.133
+MCH000057,LOC0007,Light & Wonder,Slant Top,Game 005,Reel Slots,2022-09-01,v5.0,Active,0.058
+MCH000058,LOC0007,Everi,Slant Top,Game 002,Video Slots,2025-06-23,v5.0,Active,0.0676
+MCH000059,LOC0005,IGT,Standard,Game 039,Reel Slots,2019-02-15,v5.0,Active,0.0541
+MCH000060,LOC0006,Konami,Standard,Game 025,Video Poker,2025-01-02,v4.2,Active,0.0793
+MCH000061,LOC0007,IGT,Upright,Game 024,Reel Slots,2023-01-25,v4.1,Maintenance,0.085
+MCH000062,LOC0006,Everi,Slant Top,Game 043,Video Slots,2025-01-18,v5.0,Active,0.0744
+MCH000063,LOC0007,Light & Wonder,Premium,Game 045,Reel Slots,2019-08-09,v4.2,Active,0.1246
+MCH000064,LOC0007,Aristocrat,Slant Top,Game 026,Video Poker,2019-08-17,v4.1,Active,0.0821
+MCH000065,LOC0004,Konami,Slant Top,Game 030,Reel Slots,2024-02-23,v5.1,Active,0.0753
+MCH000066,LOC0009,Konami,Upright,Game 043,Video Slots,2022-07-30,v5.0,Active,0.0988
+MCH000067,LOC0010,Light & Wonder,Standard,Game 049,Video Slots,2023-03-19,v5.0,Active,0.0627
+MCH000068,LOC0004,Aristocrat,Standard,Game 003,Video Slots,2019-12-10,v5.1,Active,0.1222
+MCH000069,LOC0002,Konami,Premium,Game 041,Video Poker,2020-10-15,v4.2,Active,0.0567
+MCH000070,LOC0007,Konami,Premium,Game 016,Video Slots,2023-01-09,v4.1,Active,0.1388
+MCH000071,LOC0002,Konami,Upright,Game 012,Video Poker,2025-12-15,v5.1,Active,0.1195
+MCH000072,LOC0004,IGT,Premium,Game 009,Reel Slots,2023-09-11,v5.0,Maintenance,0.0679
+MCH000073,LOC0008,Everi,Premium,Game 036,Reel Slots,2022-02-18,v4.2,Active,0.0505
+MCH000074,LOC0008,Konami,Slant Top,Game 049,Video Slots,2020-05-03,v5.0,Active,0.1234
+MCH000075,LOC0009,Konami,Upright,Game 018,Reel Slots,2026-06-09,v4.1,Active,0.1136
+MCH000076,LOC0004,Light & Wonder,Slant Top,Game 021,Video Poker,2023-02-14,v4.1,Active,0.1156
+MCH000077,LOC0004,Konami,Upright,Game 046,Video Slots,2024-12-16,v4.1,Active,0.1194
+MCH000078,LOC0006,Everi,Premium,Game 027,Video Slots,2024-09-28,v4.2,Active,0.0567
+MCH000079,LOC0007,Everi,Standard,Game 049,Video Poker,2024-05-27,v5.1,Active,0.0823
+MCH000080,LOC0006,Light & Wonder,Premium,Game 027,Video Poker,2020-03-30,v4.2,Active,0.0604
+MCH000081,LOC0005,Konami,Premium,Game 002,Reel Slots,2024-08-07,v5.0,Active,0.1277
+MCH000082,LOC0007,Aristocrat,Premium,Game 009,Video Poker,2021-03-09,v4.1,Active,0.1061
+MCH000083,LOC0010,Everi,Standard,Game 006,Video Poker,2021-12-05,v5.1,Active,0.0798
+MCH000084,LOC0008,Aristocrat,Standard,Game 017,Reel Slots,2024-03-31,v5.0,Active,0.0557
+MCH000085,LOC0006,Light & Wonder,Premium,Game 018,Reel Slots,2024-01-24,v5.0,Active,0.078
+MCH000086,LOC0008,IGT,Standard,Game 023,Video Slots,2021-09-17,v4.1,Active,0.0793
+MCH000087,LOC0001,IGT,Upright,Game 013,Video Slots,2022-04-06,v4.2,Active,0.1157
+MCH000088,LOC0008,IGT,Upright,Game 030,Video Poker,2026-03-10,v5.0,Active,0.1074
+MCH000089,LOC0003,Everi,Standard,Game 050,Video Slots,2022-12-09,v5.0,Active,0.1298
+MCH000090,LOC0001,Light & Wonder,Premium,Game 026,Video Poker,2022-05-17,v4.2,Active,0.0925
+MCH000091,LOC0004,IGT,Slant Top,Game 044,Video Poker,2019-07-25,v4.1,Active,0.0608
+MCH000092,LOC0010,IGT,Slant Top,Game 035,Reel Slots,2020-08-23,v5.0,Active,0.1142
+MCH000093,LOC0006,IGT,Premium,Game 032,Video Slots,2020-06-12,v5.1,Maintenance,0.1185
+MCH000094,LOC0008,Aristocrat,Premium,Game 012,Video Poker,2019-01-29,v5.0,Active,0.1005
+MCH000095,LOC0009,Konami,Premium,Game 028,Video Poker,2021-05-30,v5.0,Active,0.1194
+MCH000096,LOC0004,IGT,Slant Top,Game 029,Video Slots,2018-09-18,v5.1,Active,0.0944
+MCH000097,LOC0007,Light & Wonder,Standard,Game 032,Reel Slots,2023-07-16,v4.2,Active,0.097
+MCH000098,LOC0006,Light & Wonder,Slant Top,Game 018,Video Poker,2023-03-31,v5.0,Active,0.0885
+MCH000099,LOC0009,Aristocrat,Standard,Game 016,Video Poker,2020-06-28,v5.1,Active,0.0523
+MCH000100,LOC0004,Konami,Premium,Game 029,Video Slots,2023-07-17,v4.1,Active,0.0597

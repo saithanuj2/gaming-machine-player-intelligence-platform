@@ -1,0 +1,101 @@
+machine_id,location_id,manufacturer,cabinet_type,game_title,game_category,software_version,machine_status,machine_age_days,total_historical_events,unplanned_event_count,critical_event_count,high_severity_event_count,total_downtime_minutes,average_downtime_minutes,events_last_30_days,downtime_last_30_days,events_last_90_days,downtime_last_90_days,historical_net_revenue,revenue_last_30_days,failure_target_flag,failure_probability,predicted_failure_flag,failure_risk_level,recommended_action,revenue_at_risk
+MCH000013,LOC0009,Everi,Slant Top,Game 048,Video Poker,v5.1,Active,1878,181,160,10,40,7330,40.497237,20,1048,60,2776,2600.59,506.81,1,0.999,1,Critical,Immediate maintenance inspection,2597.99
+MCH000089,LOC0003,Everi,Standard,Game 050,Video Slots,v5.0,Active,1088,176,165,10,41,6705,38.09659,14,545,60,2508,2620.47,434.13,1,0.998,1,Critical,Immediate maintenance inspection,2615.23
+MCH000073,LOC0008,Everi,Premium,Game 036,Reel Slots,v4.2,Active,1382,177,163,8,30,6548,36.99435,15,860,51,2012,2043.81,371.69,1,0.9969999999999999,1,Critical,Immediate maintenance inspection,2037.68
+MCH000070,LOC0007,Konami,Premium,Game 016,Video Slots,v4.1,Active,1057,179,168,8,41,6676,37.296089,16,404,61,2354,2397.69,293.58,1,0.9968333333333333,1,Critical,Immediate maintenance inspection,2390.1
+MCH000010,LOC0009,Aristocrat,Slant Top,Game 050,Video Slots,v4.2,Active,453,158,143,7,28,5846,37.0,10,416,50,2323,2486.17,405.0,1,0.9953333333333334,1,Critical,Immediate maintenance inspection,2474.57
+MCH000056,LOC0008,Light & Wonder,Slant Top,Game 015,Video Slots,v4.1,Active,423,184,166,3,41,6043,32.842391,10,289,55,2046,2389.61,461.66,1,0.9944,1,Critical,Immediate maintenance inspection,2376.23
+MCH000077,LOC0004,Konami,Upright,Game 046,Video Slots,v4.1,Active,350,164,147,11,31,6504,39.658536,13,386,41,1403,2489.78,444.4,1,0.9942380952380951,1,Critical,Immediate maintenance inspection,2475.43
+MCH000019,LOC0003,Everi,Standard,Game 041,Reel Slots,v4.2,Active,2366,180,166,5,37,7040,39.111111,15,761,54,2336,2299.14,482.13,1,0.9913,1,Critical,Immediate maintenance inspection,2279.14
+MCH000054,LOC0001,Aristocrat,Slant Top,Game 027,Video Poker,v4.2,Active,2452,164,152,8,30,6600,40.243902,9,334,46,1558,2275.85,352.36,1,0.9902333333333333,1,Critical,Immediate maintenance inspection,2253.62
+MCH000048,LOC0005,IGT,Standard,Game 041,Reel Slots,v5.0,Active,1741,171,159,11,35,6531,38.192982,13,373,58,2215,2674.44,407.92,1,0.9896666666666667,1,Critical,Immediate maintenance inspection,2646.8
+MCH000084,LOC0008,Aristocrat,Standard,Game 017,Reel Slots,v5.0,Active,610,180,157,5,37,7047,39.15,14,797,61,2505,2049.64,392.1,1,0.9893666666666665,1,Critical,Immediate maintenance inspection,2027.85
+MCH000081,LOC0005,Konami,Premium,Game 002,Reel Slots,v5.0,Active,481,153,136,11,27,5254,34.339869,13,561,54,1801,2580.18,315.96,1,0.9893333333333333,1,Critical,Immediate maintenance inspection,2552.66
+MCH000034,LOC0004,Aristocrat,Premium,Game 032,Reel Slots,v4.2,Active,-169,175,159,10,41,6764,38.651428,16,428,53,1857,2302.8,484.28,1,0.9892,1,Critical,Immediate maintenance inspection,2277.93
+MCH000027,LOC0002,Everi,Upright,Game 018,Video Poker,v5.1,Active,2079,167,144,5,27,5637,33.754491,15,311,52,1432,1983.65,511.56,1,0.988352380952381,1,Critical,Immediate maintenance inspection,1960.55
+MCH000012,LOC0008,Konami,Premium,Game 010,Reel Slots,v4.2,Active,461,160,144,7,28,5448,34.05,11,303,44,1634,2976.8,675.97,1,0.9872000000000002,1,Critical,Immediate maintenance inspection,2938.7
+MCH000097,LOC0007,Light & Wonder,Standard,Game 032,Reel Slots,v4.2,Active,869,163,143,8,28,6196,38.012269,12,727,54,2346,2387.67,209.99,1,0.9865333333333333,1,Critical,Immediate maintenance inspection,2355.52
+MCH000040,LOC0004,Konami,Standard,Game 037,Video Slots,v4.1,Active,1178,178,163,8,39,6061,34.050561,14,550,52,1665,2591.99,877.06,1,0.9838190476190477,1,Critical,Immediate maintenance inspection,2550.05
+MCH000031,LOC0002,Aristocrat,Upright,Game 013,Video Poker,v5.1,Active,2195,159,139,5,31,5859,36.849056,12,1006,41,2037,2979.6,592.29,1,0.9834666666666667,1,Critical,Immediate maintenance inspection,2930.34
+MCH000011,LOC0006,Konami,Slant Top,Game 005,Video Slots,v5.0,Active,-25,175,161,3,37,6099,34.851428,9,416,43,1690,2395.96,396.58,1,0.9809666666666665,1,Critical,Immediate maintenance inspection,2350.36
+MCH000043,LOC0010,Everi,Standard,Game 005,Video Poker,v4.2,Active,-190,170,153,7,27,6070,35.705882,14,471,58,2372,2735.76,562.81,1,0.9807333333333332,1,Critical,Immediate maintenance inspection,2683.05
+MCH000091,LOC0004,IGT,Slant Top,Game 044,Video Poker,v4.1,Active,2321,175,161,8,36,6999,39.994285,15,432,46,1419,1680.65,387.49,1,0.9802857142857143,1,Critical,Immediate maintenance inspection,1647.52
+MCH000032,LOC0003,Light & Wonder,Premium,Game 016,Video Slots,v5.1,Active,1021,185,173,6,32,7019,37.94054,9,183,44,1106,2435.41,337.47,1,0.9748809523809522,1,Critical,Immediate maintenance inspection,2374.23
+MCH000071,LOC0002,Konami,Upright,Game 012,Video Poker,v5.1,Active,-14,165,152,7,37,6587,39.921212,10,180,51,2434,2218.34,326.77,1,0.9746999999999999,1,Critical,Immediate maintenance inspection,2162.22
+MCH000074,LOC0008,Konami,Slant Top,Game 049,Video Slots,v5.0,Active,2038,173,153,12,37,7070,40.867052,15,473,53,1917,1868.44,240.13,1,0.9718666666666667,1,Critical,Immediate maintenance inspection,1815.87
+MCH000045,LOC0009,Light & Wonder,Standard,Game 043,Video Poker,v5.0,Maintenance,-34,159,137,7,36,6226,39.157232,10,590,40,1611,0.0,0.0,1,0.9706333333333333,1,Critical,Immediate maintenance inspection,0.0
+MCH000041,LOC0007,Everi,Slant Top,Game 017,Video Slots,v5.0,Active,2636,181,167,6,36,6368,35.18232,18,694,58,1942,2961.33,779.52,1,0.967452380952381,1,Critical,Immediate maintenance inspection,2864.95
+MCH000023,LOC0003,Light & Wonder,Premium,Game 014,Video Poker,v4.2,Active,82,178,165,5,39,5829,32.747191,17,719,57,2089,3178.61,543.58,1,0.9635666666666663,1,Critical,Immediate maintenance inspection,3062.8
+MCH000078,LOC0006,Everi,Premium,Game 027,Video Slots,v4.2,Active,429,172,157,7,36,7480,43.488372,7,241,51,2548,2202.24,287.52,1,0.9616857142857144,1,Critical,Immediate maintenance inspection,2117.86
+MCH000016,LOC0007,Konami,Premium,Game 034,Reel Slots,v4.1,Active,2141,179,169,7,38,7020,39.217877,12,844,53,2386,2581.91,329.99,1,0.9563666666666665,1,Critical,Immediate maintenance inspection,2469.25
+MCH000001,LOC0004,Everi,Premium,Game 015,Reel Slots,v5.0,Active,309,162,152,11,33,6121,37.78395,10,392,36,1294,2206.83,644.17,1,0.9549666666666666,1,Critical,Immediate maintenance inspection,2107.45
+MCH000005,LOC0007,IGT,Slant Top,Game 041,Video Poker,v5.0,Active,1785,168,157,4,38,7560,45.0,7,305,43,1690,2270.28,365.11,1,0.9500999999999998,1,Critical,Immediate maintenance inspection,2156.99
+MCH000046,LOC0002,Aristocrat,Slant Top,Game 008,Video Slots,v4.2,Active,113,155,146,3,30,4633,29.890322,7,385,51,1666,2900.06,424.82,1,0.9377666666666665,1,Critical,Immediate maintenance inspection,2719.58
+MCH000039,LOC0009,IGT,Upright,Game 005,Video Poker,v4.1,Active,1689,131,108,1,16,2664,20.335877,5,75,29,541,2371.83,455.4,1,0.9230333333333336,1,Critical,Immediate maintenance inspection,2189.28
+MCH000065,LOC0004,Konami,Slant Top,Game 030,Reel Slots,v5.1,Active,647,127,108,1,17,2519,19.834645,7,100,41,1006,2196.46,590.2,1,0.8771428571428567,1,Critical,Immediate maintenance inspection,1926.61
+MCH000037,LOC0005,Aristocrat,Standard,Game 038,Video Poker,v4.1,Active,2695,144,120,0,17,2761,19.173611,8,81,31,491,1974.17,277.85,1,0.8634261904761904,1,Critical,Immediate maintenance inspection,1704.55
+MCH000017,LOC0002,Everi,Slant Top,Game 050,Video Poker,v5.0,Active,1119,148,121,0,24,2971,20.074324,10,126,34,446,2618.1,472.74,1,0.8599111111111111,1,Critical,Immediate maintenance inspection,2251.33
+MCH000086,LOC0008,IGT,Standard,Game 023,Video Slots,v4.1,Active,1536,149,127,0,23,2813,18.879194,4,91,39,876,2067.59,229.37,1,0.8542833333333334,1,Critical,Immediate maintenance inspection,1766.31
+MCH000007,LOC0002,Konami,Slant Top,Game 030,Video Poker,v5.0,Active,2205,139,124,0,15,2556,18.388489,4,39,30,525,2657.94,448.29,1,0.8403301587301587,1,Critical,Immediate maintenance inspection,2233.55
+MCH000090,LOC0001,Light & Wonder,Premium,Game 026,Video Poker,v4.2,Active,1294,157,129,1,24,3655,23.280254,7,220,36,717,2050.35,267.98,1,0.840247619047619,1,Critical,Immediate maintenance inspection,1722.8
+MCH000094,LOC0008,Aristocrat,Premium,Game 012,Video Poker,v5.0,Active,2498,149,131,0,24,3188,21.395973,4,47,31,630,2391.74,469.24,1,0.839909523809524,1,Critical,Immediate maintenance inspection,2008.85
+MCH000036,LOC0008,Light & Wonder,Premium,Game 045,Video Poker,v5.1,Active,-157,144,116,0,14,2688,18.666666,9,210,38,680,2894.71,662.57,1,0.8309825396825399,1,Critical,Immediate maintenance inspection,2405.45
+MCH000029,LOC0002,Konami,Slant Top,Game 028,Reel Slots,v5.1,Active,1535,140,111,0,24,3285,23.464285,8,379,38,955,2175.73,649.33,1,0.8294809523809525,1,Critical,Immediate maintenance inspection,1804.73
+MCH000082,LOC0007,Aristocrat,Premium,Game 009,Video Poker,v4.1,Active,1728,127,106,0,19,2478,19.511811,7,99,26,446,2592.64,485.32,1,0.827911111111111,1,Critical,Immediate maintenance inspection,2146.48
+MCH000006,LOC0002,IGT,Upright,Game 050,Reel Slots,v4.1,Active,1346,130,108,1,24,2470,19.0,6,210,27,438,2464.6,552.86,1,0.8146476190476188,1,Critical,Immediate maintenance inspection,2007.78
+MCH000057,LOC0007,Light & Wonder,Slant Top,Game 005,Reel Slots,v5.0,Active,1187,132,112,0,21,2726,20.651515,6,96,24,576,2269.11,405.54,1,0.8105142857142855,1,Critical,Immediate maintenance inspection,1839.15
+MCH000004,LOC0010,Light & Wonder,Standard,Game 047,Reel Slots,v4.1,Maintenance,2350,135,107,0,24,3546,26.266666,7,138,38,1097,0.0,0.0,1,0.7955428571428571,1,High,Schedule preventive maintenance,0.0
+MCH000020,LOC0003,Everi,Standard,Game 039,Reel Slots,v5.1,Active,-8,131,111,0,18,3207,24.480916,4,21,29,764,2039.65,445.47,1,0.776152380952381,1,High,Schedule preventive maintenance,1583.08
+MCH000100,LOC0004,Konami,Premium,Game 029,Video Slots,v4.1,Active,868,129,106,0,16,2580,20.0,9,232,32,715,2984.01,549.79,1,0.7674753968253968,1,High,Schedule preventive maintenance,2290.15
+MCH000096,LOC0004,IGT,Slant Top,Game 029,Video Slots,v5.1,Active,2631,127,101,0,18,2595,20.43307,9,182,33,691,2055.34,271.93,1,0.7645785714285714,1,High,Schedule preventive maintenance,1571.47
+MCH000018,LOC0007,Aristocrat,Premium,Game 001,Video Poker,v5.0,Maintenance,-139,133,110,0,15,2448,18.406015,7,170,26,414,0.0,0.0,1,0.7279642857142857,1,High,Schedule preventive maintenance,0.0
+MCH000051,LOC0006,Everi,Upright,Game 028,Video Slots,v4.1,Active,1948,130,108,0,12,2414,18.56923,4,80,28,441,2867.51,699.68,1,0.6936873015873015,1,High,Schedule preventive maintenance,1989.16
+MCH000008,LOC0006,Aristocrat,Slant Top,Game 045,Video Poker,v4.1,Active,1287,123,104,0,13,2697,21.926829,8,131,30,528,2908.15,385.23,1,0.6897412698412697,1,High,Schedule preventive maintenance,2005.87
+MCH000055,LOC0002,Konami,Standard,Game 031,Video Slots,v4.2,Active,2430,141,118,1,17,3072,21.787234,7,207,31,884,3320.72,782.01,1,0.6730833333333334,1,High,Schedule preventive maintenance,2235.12
+MCH000028,LOC0003,Everi,Premium,Game 016,Reel Slots,v5.1,Active,2222,149,123,1,23,3560,23.892617,6,263,27,833,2842.36,497.73,0,0.4420142857142857,0,Medium,Increase monitoring frequency,1256.36
+MCH000063,LOC0007,Light & Wonder,Premium,Game 045,Reel Slots,v4.2,Active,2306,140,117,0,22,3625,25.892857,8,327,38,1025,1898.74,297.1,0,0.4343142857142859,0,Medium,Increase monitoring frequency,824.65
+MCH000066,LOC0009,Konami,Upright,Game 043,Video Slots,v5.0,Active,1220,135,106,0,21,2972,22.014814,8,183,35,714,2163.1,402.7,0,0.4298976190476193,0,Medium,Increase monitoring frequency,929.91
+MCH000050,LOC0007,Everi,Standard,Game 008,Video Slots,v4.2,Active,2517,149,134,0,20,3166,21.248322,7,151,34,603,3235.19,850.75,0,0.36466587301587294,0,Medium,Increase monitoring frequency,1179.76
+MCH000067,LOC0010,Light & Wonder,Standard,Game 049,Video Slots,v5.0,Active,988,135,109,1,19,3289,24.362962,6,77,30,716,2763.21,349.67,0,0.3506119047619048,0,Medium,Increase monitoring frequency,968.81
+MCH000026,LOC0001,IGT,Standard,Game 015,Video Slots,v4.1,Active,804,141,123,0,15,2728,19.347517,3,31,24,347,3833.63,601.06,0,0.3233349206349207,0,Medium,Increase monitoring frequency,1239.55
+MCH000025,LOC0002,Light & Wonder,Standard,Game 038,Video Poker,v4.2,Active,1119,130,101,0,24,3169,24.376923,8,189,38,883,2653.25,448.84,0,0.3020809523809524,0,Medium,Increase monitoring frequency,801.5
+MCH000099,LOC0009,Aristocrat,Standard,Game 016,Video Poker,v5.1,Active,1982,90,52,0,0,1019,11.322222,9,125,23,242,2344.94,595.4,1,0.29954523809523825,0,Low,Routine monitoring,702.42
+MCH000079,LOC0007,Everi,Standard,Game 049,Video Poker,v5.1,Active,553,121,105,0,20,3279,27.099173,6,120,35,1001,2661.9,580.19,0,0.2603698412698413,0,Low,Routine monitoring,693.08
+MCH000014,LOC0007,Light & Wonder,Upright,Game 009,Video Poker,v5.1,Active,1141,125,101,0,13,2370,18.96,6,88,24,425,2165.5,276.74,0,0.21451904761904764,0,Low,Routine monitoring,464.54
+MCH000009,LOC0003,Everi,Upright,Game 011,Reel Slots,v5.1,Active,2686,131,114,0,11,2206,16.839694,6,58,28,360,2118.78,643.88,0,0.17470000000000002,0,Low,Routine monitoring,370.15
+MCH000044,LOC0003,Light & Wonder,Standard,Game 016,Reel Slots,v5.0,Active,1569,132,119,0,9,2019,15.295454,4,32,20,272,2132.23,469.15,0,0.1430952380952381,0,Low,Routine monitoring,305.11
+MCH000035,LOC0001,Aristocrat,Premium,Game 001,Reel Slots,v5.0,Active,1049,118,93,0,16,2239,18.974576,4,46,20,325,2280.63,629.58,0,0.13170317460317463,0,Low,Routine monitoring,300.37
+MCH000047,LOC0010,Aristocrat,Slant Top,Game 014,Video Poker,v5.0,Active,190,109,63,0,0,1287,11.807339,11,166,31,474,2564.66,746.06,0,0.07920238095238095,0,Low,Routine monitoring,203.13
+MCH000059,LOC0005,IGT,Standard,Game 039,Reel Slots,v5.0,Active,2481,91,60,0,1,1120,12.307692,8,86,26,250,2188.25,296.94,0,0.07751904761904763,0,Low,Routine monitoring,169.63
+MCH000002,LOC0001,Aristocrat,Premium,Game 022,Reel Slots,v4.2,Active,705,82,50,0,0,1169,14.256097,10,163,26,351,2367.21,680.76,0,0.0768666666666667,0,Low,Routine monitoring,181.96
+MCH000042,LOC0007,Aristocrat,Slant Top,Game 030,Reel Slots,v4.1,Active,2349,118,79,0,2,1127,9.550847,14,168,42,439,2889.81,1033.07,0,0.06971666666666666,0,Low,Routine monitoring,201.47
+MCH000030,LOC0001,IGT,Standard,Game 026,Video Poker,v5.0,Active,327,86,58,0,1,976,11.348837,9,44,26,213,2511.56,300.63,0,0.05991904761904762,0,Low,Routine monitoring,150.49
+MCH000068,LOC0004,Aristocrat,Standard,Game 003,Video Slots,v5.1,Active,2183,94,53,0,0,941,10.010638,12,161,27,313,2582.96,458.34,0,0.055635714285714274,0,Low,Routine monitoring,143.7
+MCH000093,LOC0006,IGT,Premium,Game 032,Video Slots,v5.1,Maintenance,1998,95,48,0,1,1076,11.326315,5,10,30,294,0.0,0.0,0,0.053433333333333326,0,Low,Routine monitoring,0.0
+MCH000075,LOC0009,Konami,Upright,Game 018,Reel Slots,v4.1,Active,-190,109,71,0,1,1108,10.165137,12,227,30,430,2644.51,575.37,0,0.05273809523809524,0,Low,Routine monitoring,139.47
+MCH000058,LOC0007,Everi,Slant Top,Game 002,Video Slots,v5.0,Active,161,82,53,0,0,918,11.195121,10,145,21,214,2269.07,496.58,0,0.0506190476190476,0,Low,Routine monitoring,114.86
+MCH000015,LOC0001,IGT,Upright,Game 041,Video Slots,v5.1,Active,329,80,55,0,2,960,12.0,6,74,17,197,2306.45,661.55,0,0.04928095238095237,0,Low,Routine monitoring,113.66
+MCH000049,LOC0006,Aristocrat,Slant Top,Game 011,Video Poker,v5.1,Active,1953,99,70,0,1,845,8.535353,9,148,21,220,2524.31,405.21,0,0.042849999999999985,0,Low,Routine monitoring,108.17
+MCH000038,LOC0001,IGT,Premium,Game 033,Video Poker,v4.2,Active,836,118,79,0,0,1214,10.288135,11,87,40,365,2671.72,500.48,0,0.03830952380952379,0,Low,Routine monitoring,102.35
+MCH000095,LOC0009,Konami,Premium,Game 028,Video Poker,v5.0,Active,1646,86,55,0,2,968,11.255813,10,99,31,438,1913.42,218.13,0,0.03622857142857143,0,Low,Routine monitoring,69.32
+MCH000003,LOC0006,IGT,Standard,Game 025,Video Slots,v5.0,Active,1640,109,70,0,0,1255,11.513761,4,49,18,149,3187.81,753.63,0,0.033819047619047624,0,Low,Routine monitoring,107.81
+MCH000033,LOC0009,IGT,Standard,Game 042,Video Poker,v4.1,Maintenance,277,98,62,0,0,953,9.724489,13,36,33,279,0.0,0.0,0,0.031200000000000002,0,Low,Routine monitoring,0.0
+MCH000022,LOC0008,IGT,Upright,Game 009,Video Poker,v5.1,Maintenance,1769,92,58,0,2,1095,11.902173,8,169,23,298,0.0,0.0,0,0.02996666666666667,0,Low,Routine monitoring,0.0
+MCH000083,LOC0010,Everi,Standard,Game 006,Video Poker,v5.1,Active,1457,101,65,0,0,1085,10.742574,9,148,32,344,2023.05,334.48,0,0.027195238095238095,0,Low,Routine monitoring,55.02
+MCH000088,LOC0008,IGT,Upright,Game 030,Video Poker,v5.0,Active,-99,107,69,0,1,1170,10.934579,6,85,29,321,2904.62,1256.17,0,0.024885714285714282,0,Low,Routine monitoring,72.28
+MCH000080,LOC0006,Light & Wonder,Premium,Game 027,Video Poker,v4.2,Active,2072,94,59,0,2,1006,10.702127,6,32,22,170,2524.25,451.06,0,0.02383333333333334,0,Low,Routine monitoring,60.16
+MCH000064,LOC0007,Aristocrat,Slant Top,Game 026,Video Poker,v4.1,Active,2298,102,72,0,1,979,9.598039,11,186,26,327,2578.35,554.6,0,0.02188333333333333,0,Low,Routine monitoring,56.42
+MCH000085,LOC0006,Light & Wonder,Premium,Game 018,Reel Slots,v5.0,Active,677,115,79,0,0,952,8.27826,7,46,28,188,2203.6,361.46,0,0.020147619047619053,0,Low,Routine monitoring,44.4
+MCH000069,LOC0002,Konami,Premium,Game 041,Video Poker,v4.2,Active,1873,99,67,0,1,1158,11.696969,10,128,25,405,2909.7,345.49,0,0.01994285714285714,0,Low,Routine monitoring,58.03
+MCH000062,LOC0006,Everi,Slant Top,Game 043,Video Slots,v5.0,Active,317,112,66,0,0,1067,9.526785,16,93,38,345,2434.52,464.84,0,0.0195,0,Low,Routine monitoring,47.47
+MCH000024,LOC0007,Light & Wonder,Premium,Game 034,Reel Slots,v4.1,Active,711,105,64,0,0,1227,11.685714,11,172,31,418,2381.66,388.61,0,0.016766666666666666,0,Low,Routine monitoring,39.93
+MCH000021,LOC0006,Light & Wonder,Upright,Game 004,Video Slots,v4.1,Active,754,96,72,0,3,1026,10.6875,5,37,31,428,2687.44,307.28,0,0.013733333333333332,0,Low,Routine monitoring,36.91
+MCH000098,LOC0006,Light & Wonder,Slant Top,Game 018,Video Poker,v5.0,Active,976,86,55,0,0,983,11.430232,11,96,30,270,2413.63,390.94,0,0.013266666666666664,0,Low,Routine monitoring,32.02
+MCH000053,LOC0009,Konami,Upright,Game 016,Video Slots,v4.2,Active,934,99,63,0,1,1099,11.10101,11,41,31,327,3308.94,788.55,0,0.011852380952380951,0,Low,Routine monitoring,39.22
+MCH000052,LOC0001,Light & Wonder,Upright,Game 044,Video Slots,v4.1,Active,-31,120,76,0,1,1283,10.691666,12,107,29,333,2249.12,455.29,0,0.011000000000000001,0,Low,Routine monitoring,24.74
+MCH000072,LOC0004,IGT,Premium,Game 009,Reel Slots,v5.0,Maintenance,812,92,66,0,2,1234,13.413043,7,76,28,275,0.0,0.0,0,0.011,0,Low,Routine monitoring,0.0
+MCH000061,LOC0007,IGT,Upright,Game 024,Reel Slots,v4.1,Maintenance,1041,105,62,0,0,1211,11.533333,6,38,25,275,0.0,0.0,0,0.010333333333333332,0,Low,Routine monitoring,0.0
+MCH000060,LOC0006,Konami,Standard,Game 025,Video Poker,v4.2,Active,333,98,63,0,1,1238,12.632653,12,91,34,309,2401.49,688.46,0,0.008,0,Low,Routine monitoring,19.21
+MCH000087,LOC0001,IGT,Upright,Game 013,Video Slots,v4.2,Active,1335,93,58,0,1,825,8.870967,5,47,20,228,2229.96,476.79,0,0.008,0,Low,Routine monitoring,17.84
+MCH000076,LOC0004,Light & Wonder,Slant Top,Game 021,Video Poker,v4.1,Active,1021,99,74,0,1,1179,11.90909,7,73,35,370,1977.33,270.0,0,0.004595238095238095,0,Low,Routine monitoring,9.09
+MCH000092,LOC0010,IGT,Slant Top,Game 035,Reel Slots,v5.0,Active,1926,94,67,0,0,979,10.414893,6,119,24,278,2670.1,282.57,0,0.0026666666666666666,0,Low,Routine monitoring,7.12

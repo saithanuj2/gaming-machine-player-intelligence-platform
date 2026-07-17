@@ -1,0 +1,3 @@
+Best model: Random Forest
+Selection metric: Cross-validation ROC-AUC
+Dataset type: Synthetic machine health dataset

@@ -1,0 +1,5 @@
+Best model: Random Forest Regressor
+Selection metric: RMSE
+Validation method: Chronological holdout
+Leakage controls: Same-day wager, payout, session, transaction and event fields excluded from model features
+Dataset type: Synthetic daily gaming revenue dataset

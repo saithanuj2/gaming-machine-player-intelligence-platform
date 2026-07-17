@@ -1,0 +1,5 @@
+failure_risk_level,machine_count,average_failure_probability,total_revenue_at_risk,total_downtime_minutes,total_critical_events,total_unplanned_events
+Critical,45,0.94180151675485,100279.39,241944,237,6498
+High,8,0.7360281746031746,11674.85,22559,1,865
+Medium,7,0.37813140589569166,7200.54,22509,2,813
+Low,40,0.05824599206349203,5261.55,49845,0,2765

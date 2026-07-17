@@ -1,0 +1,58 @@
+MACHINE FAILURE MODEL VALIDATION SUMMARY
+========================================
+
+Dataset
+-------
+Total machines: 100
+Failure machines: 54
+Healthy machines: 46
+Data type: Synthetic machine-health dataset
+
+Five-Fold Cross-Validation
+--------------------------
+Mean ROC-AUC: 0.9396
+ROC-AUC standard deviation: 0.0373
+Mean F1 score: 0.9031
+F1 standard deviation: 0.0446
+
+Full-Dataset Evaluation
+-----------------------
+Accuracy: 0.9900
+Precision: 1.0000
+Recall: 0.9815
+F1 score: 0.9907
+ROC-AUC: 0.9972
+
+Threshold Analysis
+------------------
+Selected threshold: 0.45
+Threshold accuracy: 0.9900
+Threshold precision: 1.0000
+Threshold recall: 0.9815
+Threshold F1 score: 0.9907
+
+Maintenance Risk Population
+---------------------------
+Critical-risk machines: 45
+High-risk machines: 8
+
+Most Influential Features
+-------------------------
+- total_downtime_minutes
+- high_severity_event_count
+- total_historical_events
+- downtime_last_90_days
+- unplanned_event_count
+
+Business Recommendation
+-----------------------
+Prioritize immediate inspection for Critical-risk machines.
+Schedule preventive maintenance for High-risk machines with
+high revenue exposure. Increase monitoring for Medium-risk
+machines showing rising downtime and repeated unplanned events.
+
+Interpretation Note
+-------------------
+Results are based on synthetic machine-health data. Model
+performance and maintenance recommendations require external
+validation before production deployment.

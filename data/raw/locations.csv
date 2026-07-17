@@ -1,0 +1,11 @@
+location_id,location_name,city,state,region,route_manager,location_type,opening_date,active_flag
+LOC0001,North Judithbury Gaming Center,East Jill,TX,Northeast,Kimberly Garza,Casino,2017-01-27,1
+LOC0002,North Jefferyhaven Gaming Center,New Jamesside,MT,Midwest,Kevin Pacheco,Bar,2016-08-23,1
+LOC0003,Lake Roberto Gaming Center,Ericmouth,CT,Southeast,Brent Abbott,Bar,2021-01-12,1
+LOC0004,Lake Stephenville Gaming Center,Millerport,MP,Northeast,Stacey Ward,Entertainment Center,2019-10-21,1
+LOC0005,North Donnaport Gaming Center,Port Jesseville,MS,Northeast,Mark Diaz,Entertainment Center,2022-10-31,1
+LOC0006,Jasonview Gaming Center,New Cynthiaside,VA,Southwest,Joel Nelson,Casino,2020-04-08,1
+LOC0007,Meganton Gaming Center,Port Antonio,MD,Northeast,Austin Gentry,Casino,2021-11-20,1
+LOC0008,Lake Victor Gaming Center,Thomasberg,IA,Southeast,Kimberly Burgess,Bar,2023-10-28,1
+LOC0009,Coxberg Gaming Center,Daviston,VI,West,Mark Conner,Entertainment Center,2023-09-19,1
+LOC0010,South Patrickmouth Gaming Center,Tashatown,TX,Northeast,Melanie Herrera,Entertainment Center,2021-01-26,1

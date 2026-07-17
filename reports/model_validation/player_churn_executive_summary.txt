@@ -1,0 +1,63 @@
+PLAYER CHURN MODEL VALIDATION SUMMARY
+=====================================
+
+Model
+-----
+Saved best classification pipeline
+
+Dataset
+-------
+Total players: 4,706
+Churn players: 2,459
+Non-churn players: 2,247
+Data type: Synthetic behavioral gaming dataset
+
+Five-Fold Cross-Validation
+--------------------------
+Mean ROC-AUC: 0.9908
+ROC-AUC standard deviation: 0.0010
+Mean F1 score: 0.9572
+F1 standard deviation: 0.0049
+
+Full-Dataset Evaluation
+-----------------------
+Accuracy: 0.9596
+Precision: 0.9580
+Recall: 0.9650
+F1 score: 0.9615
+ROC-AUC: 0.9917
+
+Threshold Analysis
+------------------
+Selected threshold: 0.50
+Threshold accuracy: 0.9596
+Threshold precision: 0.9580
+Threshold recall: 0.9650
+Threshold F1 score: 0.9615
+
+High-Risk Population
+--------------------
+Players with probability >= 0.80: 2,287
+
+Most Influential Features
+-------------------------
+- sessions_per_observed_day: Lower churn risk
+- observed_player_lifetime_days: Higher churn risk
+- days_since_last_session: Higher churn risk
+- sessions_last_90_days: Lower churn risk
+- sessions_last_30_days: Lower churn risk
+
+Business Recommendation
+-----------------------
+Prioritize immediate retention outreach for players classified
+as Critical risk. Use targeted loyalty offers for High-risk
+players and monitor Medium-risk players for further engagement
+decline.
+
+Interpretation Note
+-------------------
+Performance was measured on a synthetic behavioral dataset.
+The generator intentionally links historical engagement,
+recency, loyalty and wagering behavior with future churn.
+Results should not be presented as real-world casino model
+performance without external validation.
